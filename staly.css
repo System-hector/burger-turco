@@ -223,4 +223,90 @@ footer {
     font-size: 0.9rem;
   }
 }
+/* ============================= */
+/*   ESTILOS RESPONSIVE MÓVIL    */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* Oculta el video en móvil */
+  header video {
+    display: none;
+  }
+
+  /* Usa una imagen de fondo en lugar del video */
+  header {
+    background: url('img/hamburguesa.jpg') center center / cover no-repeat;
+    height: 100vh;
+    position: relative;
+  }
+
+  /* Título principal más pequeño */
+  header h1 {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 10px;
+  }
+
+  /* Botón principal más legible */
+  .btn-ordenar {
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 25px;
+  }
+
+  /* Secciones internas con menos margen */
+  section {
+    padding: 25px 15px;
+  }
+
+  /* Tarjetas o bloques de info (como Ambiente Familiar) */
+  .card, .feature, .benefit {
+    margin: 15px 0;
+    padding: 20px;
+  }
+
+  /* Títulos secundarios más compactos */
+  h2, h3 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  /* Íconos centrados y más pequeños */
+  .icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    display: block;
+    text-align: center;
+  }
+
+  /* Mejora la legibilidad de los textos */
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* Botón fijo para pedido (opcional) */
+  .boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(to right, #ff0000, #ff6600);
+    color: white;
+    border-radius: 50px;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+    z-index: 1000;
+  }
+
+  .boton-flotante:hover {
+    transform: scale(1.05);
+  }
+}
+
 
