@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: white;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #ff0000, #ff7b00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn {
+  margin-top: 20px;
+  background: linear-gradient(90deg, #ff0000, #ff7b00);
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===== MENU ===== */
+.menu {
+  text-align: center;
+  padding: 60px 20px;
+  background: #1a1a1a;
+}
+
+.menu h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff7b00;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.item img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.item:hover img {
+  transform: scale(1.1);
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 100%;
+  padding: 15px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.item:hover .info {
+  transform: translateY(0);
+}
+
+/* ===== BENEFITS ===== */
+/* ===== Benefits (SVG cards) ===== */
+.benefits-hero {
+  background: linear-gradient(180deg, rgba(212,20,20,0.12), rgba(255,126,0,0.06));
+  padding: 60px 20px;
+}
+
+.benefits-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.benefits-title {
+  font-family: 'Oswald', sans-serif;
+  color: #ff4d00;
+  font-size: 2.1rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Grid de tarjetas */
+.benefits-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* Tarjeta individual */
+.benefit-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.12));
+  border: 1px solid rgba(255,77,0,0.08);
+  padding: 22px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 170px;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55);
+}
+
+/* SVG icon style */
+.benefit-card .icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto;
+  color: #ff7e00; /* acento naranja */
+  flex-shrink: 0;
+}
+
+/* Title and paragraph */
+.benefit-card h3 {
+  margin: 6px 0 0;
+  font-family: 'Oswald', sans-serif;
+  color: #ffb84d;
+  font-size: 1.05rem;
+}
+
+.benefit-card p {
+  margin: 0;
+  color: #e6e6e6;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+/* Responsive: columna única en pantallas pequeñas */
+@media (max-width: 880px) {
+  .benefits-cards {
+    grid-template-columns: 1fr;
+  }
+  .benefit-card {
+    min-height: auto;
+    text-align: left;
+  }
+  .benefit-card .icon {
+    margin: 0 0 6px 0;
+  }
+}
+
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
+
